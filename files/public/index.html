@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entangled Intelligence</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Entangled Intelligence</h1>
+        <select id="themeSelector">
+            <option value="">Default Theme</option>
+            <option value="theme-dark">Dark Theme</option>
+            <option value="theme-cyberpunk">Cyberpunk Theme</option>
+            <option value="theme-earthy">Earthy Theme</option>
+        </select>
+        <input type="file" id="fileInput"
+            accept=".txt,.md,.py,.js,.jsx,.ts,.tsx,.java,.cpp,.c,.cs,.html,.css,.json,.xml,.csv,.sh,.php" />
+        <select id="promptTemplates">
+            <option value="">🧠 Select a Prompt Template</option>
+            <option value="Summarize this text: ">Summarize text</option>
+            <option value="Translate to Spanish: ">Translate to Spanish</option>
+            <option value="What are the key points of: ">Key points</option>
+            <option value="Explain this like I'm five: ">Explain ELI5</option>
+            <option value="Give me a professional rewrite of: ">Professional rewrite</option>
+        </select>
+        <textarea id="prompt" placeholder="Ask something..."></textarea>
+        <div class="actions">
+            <button onclick="sendPrompt()">Send</button>
+            <button id="micBtn" onclick="toggleListening()">🎤 Speak</button>
+        </div>
+        <div id="chatHistory" class="chat-box"></div>
+        <pre id="codePreview" class="code-preview"><code class="language-javascript">// Uploaded code preview will appear here</code></pre>
+        <div class="scroll-top">
+            <button onclick="scrollToTop()">⬆️ Top</button>
+            <button onclick="scrollToBottom()">⬇️ Bottom</button>
+            <button onclick="clearChat()">🧹 Clear</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
